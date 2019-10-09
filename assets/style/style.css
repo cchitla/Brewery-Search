@@ -65,7 +65,13 @@ table {
 
   }
 
+.logo {
+    right: 300px;
+}
 
+.headerText {
+    opacity: 0.01;
+}
 
 #mapBox {
     /* max-height: 500px;
