@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Css link-->
+    <link rel="stylesheet" type="text/css" href="./assets/style/style.css">
+
+    <!-- GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Changa:300,400,500,600,700,800|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
+        rel="stylesheet">
+
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+    <div class="container-fluid">
+
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/images/brewerysearch-logo.png" height="60" alt="" id="logo">
+            </a>
+        </nav>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1>Search For Your Next Favorite Brewery</h1>
+            </div>
+
+        </div>
+
+        <div class="header row pb-5 pt-3">
+
+            <div class="col-sm-1"></div>
+            <form class="col-sm-11">
+                <h3>Search Here</h3>
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control search-brewery location" placeholder="By City..."
+                            id="searchCity">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control search-brewery location" placeholder="By State..."
+                            id="searchState">
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-warning hvr-sweep-to-right"
+                            id="searchButton">Search<i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+
+
+
+            <br><br><br>
+
+
+
+        </div>
+
+
+
+
+        <div id="main-content" class="row pt-2">
+
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-5">
+
+
+                <h3>Search Results:</h3>
+
+                <div class="searchResults"></div>
+
+
+
+            </div>
+            
+            <div id="map" class="col-sm-5"></div>
+
+            <div class="col-sm-1"></div>
+
+
+        </div>
+
+
+    <!-- end of bootstrap container -->
+    </div>
+
+
+    <script src="./assets/javascript/javascript.js"></script>
+
+    
+
+    <!--Map link-->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB09A6zOM3XKtwH__oAlIUAUr1IbyXIQUY&callback=initMap"
+        async defer>
+        </script>
+</body>
+
+</html>
