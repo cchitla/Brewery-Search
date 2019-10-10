@@ -156,8 +156,12 @@ function getBreweries(searchCity, searchState) {
     url: queryURL,
     method: "GET"
   }).then(async function (response) {
-    // for each result, send the address to getCode for the latLng
-    // then send then name and latLng to breweryArray   
+    // if response is empty, tell user to enter valid city and/or state
+    if (response.length === 0) {
+      console.log("empty response");
+      return;
+      
+    }
     displayInfoArray = [];
     breweryArray = [];
     for (let i = 0; i < response.length; i++) {
@@ -169,6 +173,8 @@ function getBreweries(searchCity, searchState) {
       if (street.length == 0) {
         continue;
       };
+
+      
 
       let newAddress = `${street},${response[i].state}`;
       let codedAddress = await getGeocode(newAddress);
@@ -189,6 +195,7 @@ function getBreweries(searchCity, searchState) {
       displayInfoBrewery.push(response[i].website_url); // 4
       displayInfoArray.push(displayInfoBrewery);
     };
+    
 
     //display cards to DOM
     $(".searchResults").empty();
