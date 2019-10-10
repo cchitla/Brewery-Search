@@ -157,8 +157,9 @@ function getBreweries(searchCity, searchState) {
     method: "GET"
   }).then(async function (response) {
     // if response is empty, tell user to enter valid city and/or state
+    clearInvalidSearchError();
+
     if (response.length === 0) {
-      console.log("empty response");
       displayInvalidSearchError();
       return;
     };
@@ -305,6 +306,10 @@ function displayInvalidSearchError () {
   $("#searchCity").val("");
   $("#searchState").val("");
   TweenMax.to("#invalid-search", 1, {opacity: 1})
+}
+
+function clearInvalidSearchError () {
+  $("#invalid-search").css("opacity", "0");
 }
 
 
