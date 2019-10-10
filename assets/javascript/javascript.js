@@ -159,9 +159,12 @@ function getBreweries(searchCity, searchState) {
     // if response is empty, tell user to enter valid city and/or state
     if (response.length === 0) {
       console.log("empty response");
+      displayInvalidSearchError();
       return;
-      
-    }
+    };
+
+    $("#searchCity").val("");
+    $("#searchState").val("");
     displayInfoArray = [];
     breweryArray = [];
     for (let i = 0; i < response.length; i++) {
@@ -297,6 +300,12 @@ function getGeocode(address) {
     });
   });
 };
+
+function displayInvalidSearchError () {
+  $("#searchCity").val("");
+  $("#searchState").val("");
+  TweenMax.to("#invalid-search", 1, {opacity: 1})
+}
 
 
 

@@ -257,5 +257,11 @@ select:-webkit-autofill:focus {
     overflow-y:scroll;
 }
 
+#invalid-search {
+    opacity: 0;
+    font-size: 0.8em;
+    color: red;
+}
+
 
 
