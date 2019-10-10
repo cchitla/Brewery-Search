@@ -314,7 +314,7 @@ function clearInvalidSearchError () {
 
 
 
-TweenMax.to(".logo", 1, { left: 0 });
+TweenMax.to(".logo", .5, { left: 0 });
 TweenMax.to(".headerText", 4, { opacity: 1 });
 
 const mapStyle = [
